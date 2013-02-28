@@ -3,7 +3,7 @@ program vettore;
 
 	const dmax=30;
 	type nome=string[20];	
-	type classe=array[1..24] of nome;
+	type classe=array[1..dmax] of nome;
 	var info3a: classe;
 	var nome_da_cercare: nome;
 	var lunghezza: integer;
