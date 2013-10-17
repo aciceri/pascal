@@ -1,4 +1,4 @@
-Program gestisci_record;
+program gestisci_record;
 
 type
 	t_fattura=record
