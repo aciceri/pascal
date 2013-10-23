@@ -11,18 +11,20 @@ var
 
 procedure carica(var archivio: t_file_cognomi);
 	var continua: char;
+		i, num: integer;
 begin
-	assign(archivio, 'archivio.dat');
-	if not FileExists('archivio.dat') then
+	assign(archivio, 'cognomi.dat');
+	if not FileExists('cognomi.dat') then
 		rewrite(archivio);
 	reset(archivio);
-	repeat
-		write('Inserisci il cognome: ');
+	write('Quanti cognomi vuoi inserire? ');
+	readln(num);
+	for i:=1 to num do
+		begin
+		write('Inserisci il ', i,' cognome: ');
 		readln(cognome);
 		write(archivio, cognome);
-		writeln('Vuoi inserire un altro cognome(S/N)? ');
-		readln(continua);
-	until continua='n';
+	end;
 end;
 
 procedure visualizza(var archivio: t_file_cognomi);
