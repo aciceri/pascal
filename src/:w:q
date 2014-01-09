@@ -133,8 +133,6 @@ begin
 	close(file_voli);
 end;
 
-procedure 
-
 begin
 	inizializza(file_voli);
 	repeat
