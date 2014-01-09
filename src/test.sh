@@ -12,7 +12,7 @@ else
 	if [ -f $1 ]; then
 		tmp=${1:0:-4}
 
-		if pc $tmp.pas; then
+		if fpc $tmp.pas; then
 			./$tmp
 			rm $tmp $tmp.o
 			exit 0
